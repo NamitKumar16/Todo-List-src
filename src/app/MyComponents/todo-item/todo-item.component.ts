@@ -10,7 +10,7 @@ export class TodoItemComponent implements OnInit {
   @Input()
   todo!: Todo;
   @Input()
-  i!:number
+  i!: number;
   @Output()
   todoDelete: EventEmitter<Todo> = new EventEmitter();
   @Output()
@@ -22,7 +22,7 @@ export class TodoItemComponent implements OnInit {
     this.todoDelete.emit(todo);
     console.log('On click has been triggered');
   }
-  onCheckboxClick(todo:Todo){
-this.todoCheckbox.emit(todo)
+  onCheckboxClick(todo: Todo) {
+    this.todoCheckbox.emit(todo);
   }
 }
