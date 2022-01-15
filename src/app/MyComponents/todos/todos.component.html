@@ -2,7 +2,7 @@
   <h1 class="text-center mb-3">Todo List</h1>
 
   <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
-  <h4>Your Todos</h4>
+  <h4>Your Todos</h4><button class="btn btn-danger" (click)="deleteAll()">Delete All</button>
   <div *ngIf="this.todos.length===0; else elseBlock">
     No todos to display
   </div>

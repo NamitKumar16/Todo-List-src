@@ -1,5 +1,5 @@
 import { Todo } from './../../Todo';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-todos',
@@ -17,12 +17,15 @@ export class TodosComponent implements OnInit {
       this.todos = JSON.parse(this.localItem);
     }
   }
-
   ngOnInit(): void {}
   deleteTodo(todo: Todo) {
     console.log(todo);
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
+    localStorage.setItem('todos', JSON.stringify(this.todos));
+  }
+  deleteAll() {
+    this.todos.splice(0, this.todos.length);
     localStorage.setItem('todos', JSON.stringify(this.todos));
   }
   addTodo(todo: Todo) {

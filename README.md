@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Functionalities
 1. User can add and delete items.
 2. User can mark an item as completed.
+3. User can delete all the items in the list.
 
 ## Languages/Technologies Used
 1. Angular CLI
